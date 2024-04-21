@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">ToDo List</div>
+        <div>
+            <form>
+                <label><input class="searchBar searchImage " id="searchInput" type="text"
+                        placeholder="Search note..."></label>
+                <select id="selectTask" class="selectTask" name="ALL">
+                    <option value="all">All</option>
+                    <option value="complete">Complete</option>
+                    <option value="incomplete">Inomplete</option>
+                </select>
+                <button id="mode" class="mode"><i class="fa-solid fa-moon"></i>
+                    </i></button>
+            </form>
+            <div id="notes"></div>
+
+
+            <button id="addNewTask">
+                <i class="fa-solid fa-plus "></i>
+            </button>
+        </div>
+        <div class="list-items">
+            <ul id="myUl" style="list-style-type: none;">
+                <img id="removeId" src="Images/Detective-check-footprint.png"
+                    style="mix-blend-mode: multiply; height: 250px;width: 250px;  " alt="" srcset="">
+            </ul>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div id="modal-content" class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="heading">NEW NOTE</h3>
+            <div class="container-1">
+                 <input class="searchBar popup-bar" id="myInput" type="text" placeholder="Input your note...">
+            </div>
+            <div class="container-2">
+                <div class="footer">
+
+                    <button class="popup-cancel"  onclick="cancel()">Cancel</button>
+                    <button id="selectTask popup-apply" class="selectTask popup-apply"
+                        onclick=" newElement()">Apply</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="myModal-2" class="modal">
+        <div id="modal-content-2" class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="heading">EDIT NOTE</h3>
+            <div class="container-1">
+                 <input class="searchBar popup-bar" id="myInput-2" type="text" placeholder="Input your note...">
+            </div>
+            <div class="container-2">
+                <div class="footer">
+
+                    <button class="popup-cancel" onclick="cancel2()">Cancel</button>
+                    <button id="updateButton" class="selectTask popup-apply">Apply</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
